@@ -2,9 +2,9 @@ TO DO LIST:
 -----------
 
 - Register and enqueue styles and scripts
+- Create menus
 - Create custom post types (CPT) for Services, Portfolio, About, Team
 - Display CPTs wit the Loop
 - Create a contact form
-- Create menus
 - Create Gutenberg blocks for certain CPTs
 - Using ACFs in order to display custom contents in CPTs
