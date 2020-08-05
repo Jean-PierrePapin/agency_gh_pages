@@ -1,7 +1,7 @@
 TO DO LIST:
 -----------
 
-- Register and enqueue styles and scripts
+- Register and enqueue styles and scripts for displaying the header and the footer ========DONE========
 - Create menus
 - Create custom post types (CPT) for Services, Portfolio, About, Team
 - Display CPTs wit the Loop
