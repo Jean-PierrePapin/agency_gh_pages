@@ -35,7 +35,7 @@ function agency_sb_enqueue() {
     wp_register_script( 'agency_sb_start_bootstrap_scripts', $uri . '/', [], false );
 
     // Enqueue scripts
-    wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'jquery-scripts', get_template_directory_uri() . '/js/scripts.js', [ 'jquery' ], '1.0.0', true );
     wp_enqueue_script( 'agency_sb_start_bootstrap_jquerymin' );
     wp_enqueue_script( 'agency_sb_start_bootstrap_cdn' );
     wp_enqueue_script( 'agency_sb_start_bootstrap_jquery_easing' );
