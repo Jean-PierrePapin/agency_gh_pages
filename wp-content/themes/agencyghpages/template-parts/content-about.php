@@ -1,3 +1,11 @@
+<?php 
+
+/**
+ * Testing the display from the About part
+ */
+
+?>
+
 <!-- About-->
 <section class="page-section" id="about">
     <div class="container">

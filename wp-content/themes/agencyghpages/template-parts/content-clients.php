@@ -1,3 +1,11 @@
+<?php 
+
+/**
+ * Testing the display from the Clients part
+ */
+
+?>
+
 <!-- Clients-->
 <div class="py-5">
     <div class="container">

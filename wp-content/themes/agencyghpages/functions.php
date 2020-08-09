@@ -18,27 +18,19 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) ) {
  * Setup
  */
 
-
-
 /**
  * Includes
  */
 include( get_theme_file_path( '/includes/front/enqueue.php' ) );
-
 
 /**
  * Hooks
  */
 add_action( 'wp_enqueue_scripts', 'agency_sb_enqueue' );
 
-
 /**
  * Shortcodes
  */
-
-
-
-
 
 
 

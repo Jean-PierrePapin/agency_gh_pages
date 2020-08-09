@@ -1,3 +1,11 @@
+<?php 
+
+/**
+ * Testing the display from the Services part
+ */
+
+?>
+
 <!-- Services-->
 <section class="page-section" id="services">
     <div class="container">
