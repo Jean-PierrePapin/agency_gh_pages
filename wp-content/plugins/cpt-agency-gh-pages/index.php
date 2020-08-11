@@ -23,7 +23,7 @@ if( !function_exists( 'add_action' ) ) {
  * Includes
  */
 
-include( 'includes/init.php' );
+include( 'init.php' );
 
 
 /**
