@@ -3,9 +3,9 @@ TO DO LIST:
 
 - Register and enqueue styles and scripts for displaying the header and the footer ========DONE========
 - Create template parts ========DONE=========
-- Create menus or use the customizer to do a custom menu
-- Create custom post types (CPT) for Services, Portfolio, About, Team
+- Create menus or use the customizer to do a custom menu 
+- Create custom post types (CPT) for Services, Portfolio, About, Team  ==============DONE==========
 - Display CPTs with the Loop
 - Create a contact form
-- Create Gutenberg blocks for certain CPTs
+- Create Gutenberg blocks for certain CPTs with font and styles
 - Using ACFs in order to display custom contents in CPTs

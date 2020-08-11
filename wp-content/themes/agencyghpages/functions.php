@@ -22,11 +22,13 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) ) {
  * Includes
  */
 include( get_theme_file_path( '/includes/front/enqueue.php' ) );
+include( get_theme_file_path( '/includes/menus/primary-menu.php' ) );
 
 /**
  * Hooks
  */
 add_action( 'wp_enqueue_scripts', 'agency_sb_enqueue' );
+add_action( 'after_setup_theme', 'menu_primary' )
 
 /**
  * Shortcodes
