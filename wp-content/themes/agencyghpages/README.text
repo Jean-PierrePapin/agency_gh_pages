@@ -3,9 +3,10 @@ TO DO LIST:
 
 - Register and enqueue styles and scripts for displaying the header and the footer ========DONE========
 - Create template parts ========DONE=========
-- Create menus or use the customizer to do a custom menu 
+- Create menus or use the customizer to do a custom menu =========HALF-DONE=============
 - Create custom post types (CPT) for Services, Portfolio, About, Team  ==============DONE==========
-- Display CPTs with the Loop
-- Create a contact form
+- Create a PHP file for the required plugins for the WP theme =========HALF-DONE=============
 - Create Gutenberg blocks for certain CPTs with font and styles
+- Create a contact form
+- Display CPTs with the Loop
 - Using ACFs in order to display custom contents in CPTs
