@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * Testing the display from the Services part
+ * Testing the display from the Services part with a foreach loop instead of the WP Loop
  */
 
 ?>
@@ -30,8 +30,7 @@
             );
 
             foreach( $posts as $post ) {
-
-                //var_dump($post);
+                //var_dump( $post );
             ?>
 
                 <div class="col-md-4">

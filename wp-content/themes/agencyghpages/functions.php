@@ -18,6 +18,8 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) ) {
  * Setup
  */
 
+add_theme_support( 'post-thumbnails' );
+
 /**
  * Includes
  */
@@ -33,6 +35,7 @@ add_action( 'wp_enqueue_scripts', 'agency_sb_enqueue' );
 add_action( 'after_setup_theme', 'menu_primary' );
 
 add_action( 'tgmpa_register', 'agencyph_register_required_plugins' );
+
 
 /**
  * Shortcodes
