@@ -19,6 +19,10 @@
 
             <?php 
             
+            /**
+             * Displaying the services CPT with a simple foreach loop
+             */
+
             $posts = get_posts(
                 [
                     'numberpost'        =>  1,
@@ -39,11 +43,8 @@
                     
                 </div>
 
-            <?php 
+            <?php } ?>
 
-            }
-
-            ?>
         </div>
     </div>
 </section>
