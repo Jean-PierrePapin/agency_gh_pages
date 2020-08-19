@@ -23,24 +23,34 @@
              */
 
             $args = [
-                'post_type'         =>  'about',
+                'post_type'         =>  'abouts',
                 'nopaging'          =>  false,
                 'posts_per_page'    =>  '10',
                 'order'             =>  'DES',
                 'orderby'           =>  'ID'
             ];
             
-            $post = new WP_query( $args );
+            $query = new WP_query( $args );
 
-            if( $post->have_posts() ) {
-                while( $post->have_posts() ) {
+            if( $query->have_posts() ) {
+                while( $query->have_posts() ) {
+                    $query->the_post();
                     ?>
 
                     
-
+                    <?php the_content(); ?>
 
                     <?php
                 }   
+            } else { // Just to display in case, there is not CPTs
+                
+                echo   '<div class="container">
+                            <div class="row">
+                                <h1 class="justify-content-center">Sorry, there is not post to display!</h1>
+                            </div>
+                        </div>';
+                
+                
             }
 
             ?>
@@ -60,24 +70,36 @@
             <!-- 
 
             <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/about/1.jpg" alt="" /></div>
+                <div class="timeline-image">
+                    <img class="rounded-circle img-fluid" src="<?php //echo get_template_directory_uri(); ?>/assets/img/about/1.jpg" alt="" />
+                </div>
+
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>2009-2011</h4>
                         <h4 class="subheading">Our Humble Beginnings</h4>
                     </div>
-                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+
+                    <div class="timeline-body">
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    </div>
                 </div>
             </li>
 
             <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/about/2.jpg" alt="" /></div>
+                <div class="timeline-image">
+                    <img class="rounded-circle img-fluid" src="<?php //echo get_template_directory_uri(); ?>/assets/img/about/2.jpg" alt="" />
+                </div>
+
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>March 2011</h4>
                         <h4 class="subheading">An Agency is Born</h4>
                     </div>
-                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
+
+                    <div class="timeline-body">
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                    </div>
                 </div>
             </li>
 
