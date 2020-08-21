@@ -23,7 +23,7 @@
              */
 
             $args = [
-                'post_type'         =>  'abouts',
+                'post_type'         =>  'about',
                 'nopaging'          =>  false,
                 'posts_per_page'    =>  '10',
                 'order'             =>  'DES',
@@ -35,10 +35,25 @@
             if( $query->have_posts() ) {
                 while( $query->have_posts() ) {
                     $query->the_post();
+                    //var_dump($query);
                     ?>
+                    <li>    
+                        <div class="timeline-image">
+                            <img class="rounded-circle img-fluid" src="<?php echo the_post_thumbnail(); ?>" alt="" />
+                        </div>
 
-                    
-                    <?php the_content(); ?>
+                        <div class="timeline-heading">
+                            <h4>2009-2011</h4>
+                            <h4 class="subheading">Our Humble Beginnings</h4>
+                        </div>
+
+                        <?php the_content(); ?>
+
+                        <div class="timeline-body">
+                        
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                        </div>
+                    </li>
 
                     <?php
                 }   
@@ -49,8 +64,7 @@
                                 <h1 class="justify-content-center">Sorry, there is not post to display!</h1>
                             </div>
                         </div>';
-                
-                
+    
             }
 
             ?>
