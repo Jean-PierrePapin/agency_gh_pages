@@ -125,9 +125,9 @@ function portfolio_init() {
 function about_init() {
     $labels = array(
         'name'                  => _x( 'about', 'Post type general name', 'abouts' ),
-        'singular_name'         => _x( 'abouts', 'Post type singular name', 'abouts' ),
-        'menu_name'             => _x( 'abouts', 'Admin Menu text', 'abouts' ),
-        'name_admin_bar'        => _x( 'abouts', 'Add New on Toolbar', 'abouts' ),
+        'singular_name'         => _x( 'about', 'Post type singular name', 'abouts' ),
+        'menu_name'             => _x( 'about', 'Admin Menu text', 'abouts' ),
+        'name_admin_bar'        => _x( 'about', 'Add New on Toolbar', 'abouts' ),
         'add_new'               => __( 'Add New', 'abouts' ),
         'add_new_item'          => __( 'Add New abouts', 'abouts' ),
         'new_item'              => __( 'New abouts', 'abouts' ),

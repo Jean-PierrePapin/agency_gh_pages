@@ -19,7 +19,10 @@
             <?php
 
             /**
-             * WP_Query to display the timeline with the Loop
+             * WP_Query to display the timeline with the Loop in order to display the custom post display 
+             * 'about' with the CSS files for the timeline
+             * 
+             * 
              */
 
             $args = [
@@ -30,12 +33,13 @@
                 'orderby'           =>  'ID'
             ];
             
-            $query = new WP_query( $args );
+            $query = new WP_Query( $args );
 
             if( $query->have_posts() ) {
+
                 while( $query->have_posts() ) {
                     $query->the_post();
-                    //var_dump($query);
+                    var_dump($query);
                     ?>
                     <li>    
                         <div class="timeline-image">
@@ -43,20 +47,22 @@
                         </div>
 
                         <div class="timeline-heading">
-                            <h4>2009-2011</h4>
-                            <h4 class="subheading">Our Humble Beginnings</h4>
+                            <h4>Timeline: <?php //echo get_post_custom( $query->ID ); //, 'year', true  get_post_meta( $query->ID, 'year', true ) ?></h4>
+                            <h4 class="subheading"><?php the_title(); ?></h4>
                         </div>
-
-                        <?php the_content(); ?>
 
                         <div class="timeline-body">
                         
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                            <p class="text-muted">
+                                <?php the_content(); ?>
+                            </p>
+
                         </div>
                     </li>
 
                     <?php
                 }   
+
             } else { // Just to display in case, there is not CPTs
                 
                 echo   '<div class="container">
