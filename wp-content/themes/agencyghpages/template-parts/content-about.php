@@ -22,9 +22,9 @@
              * WP_Query to display the timeline with the Loop in order to display the custom post display 
              * 'about' with the CSS files for the timeline
              * 
-             * 
              */
 
+            // WP_Query arguments
             $args = [
                 'post_type'         =>  'about',
                 'nopaging'          =>  false,
@@ -32,14 +32,33 @@
                 'order'             =>  'DES',
                 'orderby'           =>  'ID'
             ];
+
+            // WP_Meta_Query arguments
+            $meta_args = [
+
+            ];
             
+            /**
+             * To access the WP_Query class
+             */
+
             $query = new WP_Query( $args );
+
+            /**
+             * To access the WP_Meta_Query class
+             */
+
+            $meta_query = new WP_Meta_Query( $meta_args );
+
+            /**
+             * Beginning of the Loop
+             */
 
             if( $query->have_posts() ) {
 
                 while( $query->have_posts() ) {
                     $query->the_post();
-                    var_dump($query);
+                    //var_dump($query);
                     ?>
                     <li>    
                         <div class="timeline-image">
@@ -47,7 +66,8 @@
                         </div>
 
                         <div class="timeline-heading">
-                            <h4>Timeline: <?php //echo get_post_custom( $query->ID ); //, 'year', true  get_post_meta( $query->ID, 'year', true ) ?></h4>
+                            <h4><?php echo the_meta(); 
+                            // get_post_meta( $meta_query->ID, 'year', true )   get_post_custom( $query->ID ) ?></h4>
                             <h4 class="subheading"><?php the_title(); ?></h4>
                         </div>
 
@@ -72,6 +92,10 @@
                         </div>';
     
             }
+
+            /**
+             * End of the Loop
+             */
 
             ?>
 
