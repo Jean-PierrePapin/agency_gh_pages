@@ -29,13 +29,8 @@
                 'post_type'         =>  'about',
                 'nopaging'          =>  false,
                 'posts_per_page'    =>  '10',
-                'order'             =>  'DES',
+                'order'             =>  'ASC',
                 'orderby'           =>  'ID'
-            ];
-
-            // WP_Meta_Query arguments
-            $meta_args = [
-
             ];
             
             /**
@@ -45,43 +40,78 @@
             $query = new WP_Query( $args );
 
             /**
-             * To access the WP_Meta_Query class
-             */
-
-            $meta_query = new WP_Meta_Query( $meta_args );
-
-            /**
              * Beginning of the Loop
              */
 
             if( $query->have_posts() ) {
 
+                // Count variable to display on the timeline on the left of right
+                $count = 0;
+
                 while( $query->have_posts() ) {
                     $query->the_post();
                     //var_dump($query);
-                    ?>
-                    <li>    
 
-                        <div class="timeline-image">
-                            <img class="rounded-circle img-fluid" src="<?php echo the_post_thumbnail(); ?>" alt="" />
-                        </div>
+                    if( ( $count % 2 ) == 0 ) {
+                        ?>
 
-                        <div class="timeline-panel">
+                        <li>    
 
-                            <div class="timeline-heading">
-                                <h4><?php echo the_custom_meta(); ?></h4>
-                                <h4 class="subheading"><?php the_title(); ?></h4>
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="<?php echo the_post_thumbnail(); ?>" alt="" />
                             </div>
 
-                            <div class="timeline-body">
+                            <div class="timeline-panel">
+
+                                <div class="timeline-heading">
+                                    <h4><?php echo the_custom_meta(); ?></h4>
+                                    <h4 class="subheading"><?php the_title(); ?></h4>
+                                </div>
+
+                                <div class="timeline-body">
+                                        <?php the_content(); ?>
+                                </div>
+
+                            </div>
+                            
+                        </li>
+
+                        <?php   
+
+                        // Incrementation of count
+                        $count += 1;
+
+                    } elseif( ! ( $count % 2 ) == 0 ) {
+                        ?>
+
+                        <li class="timeline-inverted">
+
+                            <div class="timeline-image">
+                                <img class="rounded-circle img-fluid" src="<?php echo the_post_thumbnail(); ?>" alt="" />
+                            </div>
+
+                            <div class="timeline-panel">
+
+                                <div class="timeline-heading">
+                                    <h4><?php echo the_custom_meta(); ?></h4>
+                                    <h4 class="subheading"><?php the_title(); ?></h4>
+                                </div>
+
+                                <div class="timeline-body">
                                     <?php the_content(); ?>
+                                </div>
+
                             </div>
 
-                        </div>
+                        </li>
                         
-                    </li>
+                        <?php
 
-                    <?php
+                        // Incrementation of count
+                        $count += 1;
+                    }
+
+
                 }   
 
             } else { // Just to display in case, there is not CPTs
@@ -112,68 +142,6 @@
                 </div>
             </li> 
         
-            <!-- 
-
-            <li>
-                <div class="timeline-image">
-                    <img class="rounded-circle img-fluid" src="<?php //echo get_template_directory_uri(); ?>/assets/img/about/1.jpg" alt="" />
-                </div>
-
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>2009-2011</h4>
-                        <h4 class="subheading">Our Humble Beginnings</h4>
-                    </div>
-
-                    <div class="timeline-body">
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                    </div>
-                </div>
-            </li>
-
-            <li class="timeline-inverted">
-                <div class="timeline-image">
-                    <img class="rounded-circle img-fluid" src="<?php //echo get_template_directory_uri(); ?>/assets/img/about/2.jpg" alt="" />
-                </div>
-
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>March 2011</h4>
-                        <h4 class="subheading">An Agency is Born</h4>
-                    </div>
-
-                    <div class="timeline-body">
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/about/3.jpg" alt="" /></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>December 2012</h4>
-                        <h4 class="subheading">Transition to Full Service</h4>
-                    </div>
-                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                </div>
-            </li>
-
-            <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="<?php echo get_template_directory_uri(); ?>/assets/img/about/4.jpg" alt="" /></div>
-                <div class="timeline-panel">
-                    <div class="timeline-heading">
-                        <h4>July 2014</h4>
-                        <h4 class="subheading">Phase Two Expansion</h4>
-                    </div>
-                    <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                </div>
-            </li>
-
-            
-
-            -->
-
         </ul>
     </div>
 </section>
