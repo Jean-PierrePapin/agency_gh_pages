@@ -33,7 +33,7 @@ add_action( 'init', 'services_init' );
 add_action( 'init', 'portfolio_init' );
 add_action( 'init', 'about_init' );
 add_action( 'init', 'team_init' );
-
+add_action( 'init', 'clients_init' );
 
 /**
  * Shortcodes

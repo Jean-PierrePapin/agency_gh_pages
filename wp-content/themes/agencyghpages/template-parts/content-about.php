@@ -1,7 +1,7 @@
 <?php 
 
 /**
- * Testing the display from the About part
+ * Template part for displaying the About CPT
  */
 
 ?>

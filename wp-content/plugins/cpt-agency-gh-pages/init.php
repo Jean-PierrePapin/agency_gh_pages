@@ -235,3 +235,62 @@ function team_init() {
         'show_in_rest'          =>  true
     ]);
 }
+
+/**
+ *  function for Team CPT
+ */
+
+function clients_init() {
+    $labels = array(
+        'name'                  => _x( 'client', 'Post type general name', 'clients' ),
+        'singular_name'         => _x( 'clients', 'Post type singular name', 'clients' ),
+        'menu_name'             => _x( 'clients', 'Admin Menu text', 'clients' ),
+        'name_admin_bar'        => _x( 'clients', 'Add New on Toolbar', 'clients' ),
+        'add_new'               => __( 'Add New', 'clients' ),
+        'add_new_item'          => __( 'Add New clients', 'clients' ),
+        'new_item'              => __( 'New clients', 'clients' ),
+        'edit_item'             => __( 'Edit clients', 'clients' ),
+        'view_item'             => __( 'View clients', 'clients' ),
+        'all_items'             => __( 'All clients', 'clients' ),
+        'search_items'          => __( 'Search clients', 'clients' ),
+        'parent_item_colon'     => __( 'Parent clients:', 'clients' ),
+        'not_found'             => __( 'No clients found.', 'clients' ),
+        'not_found_in_trash'    => __( 'No clientss found in Trash.', 'clients' ),
+        'featured_image'        => _x( 'clients Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'clients' ),
+        'set_featured_image'    => _x( 'Set cover image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'clients' ),
+        'remove_featured_image' => _x( 'Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'clients' ),
+        'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'clients' ),
+        'archives'              => _x( 'clients archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'clients' ),
+        'insert_into_item'      => _x( 'Insert into clients', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'clients' ),
+        'uploaded_to_this_item' => _x( 'Uploaded to this clientss', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4', 'clients' ),
+        'filter_items_list'     => _x( 'Filter clients list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'clients' ),
+        'items_list_navigation' => _x( 'clients list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'clients' ),
+        'items_list'            => _x( 'clients list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'clients' ),
+    );
+ 
+    $args                       =   array(
+        'labels'                =>  $labels,
+        'description'           =>  'A custom post type for client',
+        'public'                =>  true,
+        'publicly_queryable'    =>  true,
+        'show_ui'               =>  true,
+        'show_in_menu'          =>  true,
+        'query_var'             =>  true,
+        'rewrite'               =>  array( 'slug' => 'client' ),
+        'capability_type'       =>  'post',
+        'has_archive'           =>  true,
+        'hierarchical'          =>  false,
+        'menu_position'         =>  20,
+        'supports'              =>  [ 'title', 'editor', 'author', 'thumbnail' ],
+        'taxonomies'            =>  [ 'category', 'post_tag' ],
+        'show_in_rest'          =>  true
+    );
+ 
+    register_post_type( 'client', $args );
+
+    register_taxonomy( 'origin', 'client', [
+        'label'                 =>  __( 'Origin', 'client' ),
+        'rewrite'               =>  [ 'slug' => 'origin' ],
+        'show_in_rest'          =>  true
+    ]);
+}
