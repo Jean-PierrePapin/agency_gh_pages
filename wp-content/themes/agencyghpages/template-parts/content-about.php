@@ -61,23 +61,24 @@
                     //var_dump($query);
                     ?>
                     <li>    
+
                         <div class="timeline-image">
                             <img class="rounded-circle img-fluid" src="<?php echo the_post_thumbnail(); ?>" alt="" />
                         </div>
 
-                        <div class="timeline-heading">
-                            <h4><?php echo the_meta(); 
-                            // get_post_meta( $meta_query->ID, 'year', true )   get_post_custom( $query->ID ) ?></h4>
-                            <h4 class="subheading"><?php the_title(); ?></h4>
-                        </div>
+                        <div class="timeline-panel">
 
-                        <div class="timeline-body">
+                            <div class="timeline-heading">
+                                <h4><?php echo the_custom_meta(); ?></h4>
+                                <h4 class="subheading"><?php the_title(); ?></h4>
+                            </div>
+
+                            <div class="timeline-body">
+                                    <?php the_content(); ?>
+                            </div>
+
+                        </div>
                         
-                            <p class="text-muted">
-                                <?php the_content(); ?>
-                            </p>
-
-                        </div>
                     </li>
 
                     <?php
