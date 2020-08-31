@@ -58,7 +58,12 @@
                         <li>    
 
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="<?php echo the_post_thumbnail(); ?>" alt="" />
+                                <?php echo get_the_post_thumbnail( 
+                                        $query->post_id, 
+                                        'post-thumbnail', 
+                                        [ 'class' => 'rounded-circle img-fluid' ] 
+                                    ); ?>
+                                
                             </div>
 
                             <div class="timeline-panel">
@@ -87,8 +92,13 @@
                         <li class="timeline-inverted">
 
                             <div class="timeline-image">
-                                <img class="rounded-circle img-fluid" src="<?php echo the_post_thumbnail(); ?>" alt="" />
+                                <?php echo get_the_post_thumbnail( 
+                                        $query->post_id, 
+                                        'post-thumbnail', 
+                                        [ 'class' => 'rounded-circle img-fluid' ] 
+                                    ); ?>
                             </div>
+                            
 
                             <div class="timeline-panel">
 

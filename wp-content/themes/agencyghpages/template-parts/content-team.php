@@ -44,15 +44,33 @@
             if( $query->have_posts() ) {
                 while( $query->have_posts() ) {
                     $query->the_post();
+                    ?>
+                    
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <?php echo get_the_post_thumbnail( 
+                                    $query->post_id, 
+                                    'thumbnail', 
+                                    [ 'class' => 'mx-auto rounded-circle' ] 
+                                ); ?> 
+                            <h4><?php the_title(); ?></h4>
+                            <?php echo the_content(); ?>
+                        </div>
+                    </div>
 
-
-
-
-                }
+                    <?php
+                }   
             }
 
             ?>
 
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                </div>
+            </div>
+
+           <!--  
             <div class="col-lg-4">
                 <div class="team-member">
                     <img class="mx-auto rounded-circle" src="<?php echo get_template_directory_uri(); ?>/assets/img/team/1.jpg" alt="" />
@@ -91,6 +109,6 @@
         <div class="row">
             <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
         </div>
-
+ -->
     </div>
 </section>
