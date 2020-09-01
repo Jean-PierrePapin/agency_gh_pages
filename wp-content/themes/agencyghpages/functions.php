@@ -18,15 +18,15 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) ) {
  * Setup
  */
 
-add_theme_support( 'post-thumbnails' );
+
 
 /**
  * Includes
  */
 include( get_theme_file_path( '/includes/front/enqueue.php' ) );
 include( get_theme_file_path( '/includes/menus/primary-menu.php' ) );
-
 include( get_theme_file_path( '/includes/register-plugins.php' ) );
+//include( get_theme_file_path( '/includes/front/post-thumbnail.php' ) );
 
 /**
  * Hooks
@@ -36,6 +36,7 @@ add_action( 'after_setup_theme', 'menu_primary' );
 
 add_action( 'tgmpa_register', 'agencyph_register_required_plugins' );
 
+add_theme_support( 'post-thumbnails' );
 
 /**
  * Shortcodes

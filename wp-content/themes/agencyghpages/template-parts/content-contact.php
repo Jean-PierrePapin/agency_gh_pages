@@ -1,3 +1,11 @@
+<?php 
+
+/**
+ * Template part for displaying the contact form
+ */
+
+?>
+
 <!-- Contact-->
 <section class="page-section" id="contact">
     <div class="container">

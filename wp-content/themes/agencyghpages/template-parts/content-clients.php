@@ -47,7 +47,7 @@
                     <div class="col-md-3 col-sm-6 my-3">
                         <?php echo get_the_post_thumbnail(
                                     $query->post_id,
-                                    'thumbnail',
+                                    ['200', '50'],
                                     ['class' => 'img-fluid d-block mx-auto']
 
                         ); ?>
