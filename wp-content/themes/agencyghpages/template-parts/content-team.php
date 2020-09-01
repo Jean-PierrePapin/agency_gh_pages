@@ -51,7 +51,7 @@
                             <?php echo get_the_post_thumbnail( 
                                     $query->post_id, 
                                     'thumbnail', 
-                                    [ 'class' => 'mx-auto rounded-circle' ] 
+                                    ['class' => 'mx-auto rounded-circle'] 
                                 ); ?> 
                             <h4><?php the_title(); ?></h4>
                             <?php echo the_content(); ?>
@@ -60,6 +60,12 @@
 
                     <?php
                 }   
+            } else {
+                echo   '<div class="container">
+                            <div class="row">
+                                <h1 class="justify-content-center">Sorry, there is not post to display!</h1>
+                            </div>
+                        </div>';
             }
 
             ?>
