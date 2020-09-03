@@ -15,39 +15,30 @@
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
 
-        <form id="contactForm" name="sentMessage" novalidate="novalidate">
-            <div class="row align-items-stretch mb-5">
+        <?php 
+        
+        /**
+         * WP_Query class use to display 1 CPT contact form with the WPForm plugin
+         */
 
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input class="form-control" id="name" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name." />
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" id="email" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address." />
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="form-group mb-md-0">
-                        <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number." />
-                        <p class="help-block text-danger"></p>
-                    </div>
-                </div>
+        $args = [
+            'post_type'         =>  'contact form',
+            'nopaging'          =>  false,
+            'posts_per_page'    =>  '1',
+            'order'             =>  'ASC',
+            'orderby'           =>  'ID'
+        ];
 
-                <div class="col-md-6">
-                    <div class="form-group form-group-textarea mb-md-0">
-                        <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
-                        <p class="help-block text-danger"></p>
-                    </div>
-                </div>
-                
-            </div>
+        $posts = new WP_Query( $args );
+        $posts = $posts->get_posts();
 
-            <div class="text-center">
-                <div id="success"></div>
-                <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
-            </div>
+        foreach( $posts as $post ) {
 
-        </form>
+            echo $post->post_content;
+
+        }
+
+        ?>
 
     </div>
 </section>

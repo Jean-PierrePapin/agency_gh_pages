@@ -294,3 +294,62 @@ function clients_init() {
         'show_in_rest'          =>  true
     ]);
 }
+
+/**
+ *  function for Team CPT
+ */
+
+function contact_form_init() {
+    $labels = array(
+        'name'                  => _x( 'contact form', 'Post type general name', 'contact forms' ),
+        'singular_name'         => _x( 'contact forms', 'Post type singular name', 'contact forms' ),
+        'menu_name'             => _x( 'contact forms', 'Admin Menu text', 'contact forms' ),
+        'name_admin_bar'        => _x( 'contact forms', 'Add New on Toolbar', 'contact forms' ),
+        'add_new'               => __( 'Add New', 'contact forms' ),
+        'add_new_item'          => __( 'Add New contact forms', 'contact forms' ),
+        'new_item'              => __( 'New contact forms', 'contact forms' ),
+        'edit_item'             => __( 'Edit contact forms', 'contact forms' ),
+        'view_item'             => __( 'View contact forms', 'contact forms' ),
+        'all_items'             => __( 'All contact forms', 'contact forms' ),
+        'search_items'          => __( 'Search contact forms', 'contact forms' ),
+        'parent_item_colon'     => __( 'Parent contact forms:', 'contact forms' ),
+        'not_found'             => __( 'No contact forms found.', 'contact forms' ),
+        'not_found_in_trash'    => __( 'No contact formss found in Trash.', 'contact forms' ),
+        'featured_image'        => _x( 'contact forms Cover Image', 'Overrides the “Featured Image” phrase for this post type. Added in 4.3', 'contact forms' ),
+        'set_featured_image'    => _x( 'Set cover image', 'Overrides the “Set featured image” phrase for this post type. Added in 4.3', 'contact forms' ),
+        'remove_featured_image' => _x( 'Remove cover image', 'Overrides the “Remove featured image” phrase for this post type. Added in 4.3', 'contact forms' ),
+        'use_featured_image'    => _x( 'Use as cover image', 'Overrides the “Use as featured image” phrase for this post type. Added in 4.3', 'contact forms' ),
+        'archives'              => _x( 'contact forms archives', 'The post type archive label used in nav menus. Default “Post Archives”. Added in 4.4', 'contact forms' ),
+        'insert_into_item'      => _x( 'Insert into contact forms', 'Overrides the “Insert into post”/”Insert into page” phrase (used when inserting media into a post). Added in 4.4', 'contact forms' ),
+        'uploaded_to_this_item' => _x( 'Uploaded to this contact formss', 'Overrides the “Uploaded to this post”/”Uploaded to this page” phrase (used when viewing media attached to a post). Added in 4.4', 'contact forms' ),
+        'filter_items_list'     => _x( 'Filter contact forms list', 'Screen reader text for the filter links heading on the post type listing screen. Default “Filter posts list”/”Filter pages list”. Added in 4.4', 'contact forms' ),
+        'items_list_navigation' => _x( 'contact forms list navigation', 'Screen reader text for the pagination heading on the post type listing screen. Default “Posts list navigation”/”Pages list navigation”. Added in 4.4', 'contact forms' ),
+        'items_list'            => _x( 'contact forms list', 'Screen reader text for the items list heading on the post type listing screen. Default “Posts list”/”Pages list”. Added in 4.4', 'contact forms' ),
+    );
+ 
+    $args                       =   array(
+        'labels'                =>  $labels,
+        'description'           =>  'A custom post type for contact form',
+        'public'                =>  true,
+        'publicly_queryable'    =>  true,
+        'show_ui'               =>  true,
+        'show_in_menu'          =>  true,
+        'query_var'             =>  true,
+        'rewrite'               =>  array( 'slug' => 'contact form' ),
+        'capability_type'       =>  'post',
+        'has_archive'           =>  true,
+        'hierarchical'          =>  false,
+        'menu_position'         =>  20,
+        'supports'              =>  [ 'title', 'editor', 'author', 'thumbnail' ],
+        'taxonomies'            =>  [ 'category', 'post_tag' ],
+        'show_in_rest'          =>  true
+    );
+ 
+    register_post_type( 'contact form', $args );
+
+    register_taxonomy( 'origin', 'contact form', [
+        'label'                 =>  __( 'Origin', 'contact form' ),
+        'rewrite'               =>  [ 'slug' => 'origin' ],
+        'show_in_rest'          =>  true
+    ]);
+}
