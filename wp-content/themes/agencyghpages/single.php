@@ -11,7 +11,7 @@ get_header();
  */
 
 $args = [
-    'post_type'         =>  'contact form',
+    'post_type'         =>  'contact forms',
     'nopaging'          =>  false,
     'posts_per_page'    =>  '1',
     'order'             =>  'ASC',
