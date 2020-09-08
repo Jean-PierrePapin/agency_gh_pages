@@ -24,19 +24,24 @@
         $args = [
             'post_type'         =>  'contact form',
             'nopaging'          =>  false,
-            'posts_per_page'    =>  '1',
+            'posts_per_page'    =>  '2',
             'order'             =>  'ASC',
             'orderby'           =>  'ID'
         ];
 
-        $posts = new WP_Query( $args );
-        $posts = $posts->get_posts();
+        $query = new WP_Query( $args );
+        
 
-        foreach( $posts as $post ) {
+        if( $query->have_posts() ) {
+            while( $query->have_posts() ) {
+                $query->the_post();
 
-            echo $post->post_content;
+                //var_dump($query->post_content);
+                echo $query->post_content;
 
+            }
         }
+
 
         ?>
 
