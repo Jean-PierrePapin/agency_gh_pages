@@ -8,7 +8,8 @@ TO DO LIST:
 - Create custom post types (CPT) for Services, Portfolio, About, Team  ==============DONE==========
 - Create a PHP file for the required plugins for the WP theme =========HALF-DONE=============
 - Create Gutenberg blocks for certain CPTs with font and styles
-- Create a contact form
+- Create a contact form ===========DONE==========
+- Styling the contact form
 - Display CPTs with the Loop ===========DONE=============
 - Using ACFs in order to display custom contents in CPTs
 
@@ -36,3 +37,8 @@ https://wpforms.com/docs/how-to-properly-test-your-wordpress-forms-before-launch
 
 10/09/2020
 https://wpforms.com/developers/how-to-add-wpforms-shortcodes-to-php-templates/
+
+13/09/2020
+Stlying the button
+https://wpforms.com/docs/how-to-customize-the-submit-button/
+https://wpforms.com/docs/how-to-customize-the-style-of-individual-form-fields/

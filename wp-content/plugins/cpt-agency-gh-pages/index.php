@@ -34,7 +34,7 @@ add_action( 'init', 'portfolio_init' );
 add_action( 'init', 'about_init' );
 add_action( 'init', 'team_init' );
 add_action( 'init', 'clients_init' );
-add_action( 'init', 'contact_form_init' );
+//add_action( 'init', 'contact_form_init' );
 
 /**
  * Shortcodes
