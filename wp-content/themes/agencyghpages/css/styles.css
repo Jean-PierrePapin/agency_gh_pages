@@ -2370,6 +2370,7 @@ textarea.form-control {
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
+/* STYLING FORM */
 .form-inline {
   display: flex;
   flex-flow: row wrap;
@@ -2426,6 +2427,7 @@ textarea.form-control {
     margin-bottom: 0;
   }
 }
+/* STYLING BUTTON */
 
 .btn {
   display: inline-block;
