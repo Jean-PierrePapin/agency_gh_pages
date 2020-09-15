@@ -15,7 +15,7 @@
             <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
 
-        
+            
             <?php 
             
             /**
@@ -46,6 +46,7 @@
             echo do_shortcode( '[wpforms id="56"]' );
 
             ?>
-        
+            
+
     </div>
 </section>
