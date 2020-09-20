@@ -9,9 +9,9 @@ TO DO LIST:
 - Create a PHP file for the required plugins for the WP theme =========HALF-DONE=============
 - Create Gutenberg blocks for certain CPTs with font and styles
 - Create a contact form ===========DONE==========
-- Styling the contact form
+- Styling the contact form ===========NOT=DONE=================
 - Display CPTs with the Loop ===========DONE=============
-- Using ACFs in order to display custom contents in CPTs
+- Using ACFs in order to display custom contents in CPTs =========DONE===========
 
 
 ----------------------------------------------------------------------------------------
@@ -43,3 +43,6 @@ Stlying the button
 https://wpforms.com/docs/how-to-customize-the-submit-button/
 https://wpforms.com/docs/how-to-customize-the-style-of-individual-form-fields/
 
+20/09/2020
+Customizer
+https://developer.wordpress.org/themes/customize-api/

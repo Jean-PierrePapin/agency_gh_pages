@@ -10510,48 +10510,40 @@ section#contact form#contactForm :-ms-input-placeholder {
 /***********************************************************************************************************/
 /***********************************************************************************************************/
 /***********************************************************************************************************/
+
 /*
   STYLING FOR THE WPForms
 */
 
-/* Button stlying */
+/* Styling the form */
+
+/* div.wpforms-container-full .wpforms-form {
+  height: 400.4x; 
+} */
+
+
+/* Button styling */
 div.wpforms-container-full .wpforms-form div.wpforms-submit-container button.wpforms-submit
 {
 		background-color: #fed136;
     border: 1px solid #fed136;
     color: #fff;
-    padding: 0.375rem 0.75rem;
+    padding: 1.25rem 25rem;
   	font-size: 1rem;
   	line-height: 1.5;
   	border-radius: 0.25rem;
 }
 
-div.wpforms-container-full .wpforms-form div.wpforms-submit-container button.wpforms-submit {
+/* div.wpforms-container-full .wpforms-form div.wpforms-submit-container button.wpforms-submit {
 	
 }
+ */
+
+
+
 
 /*
  * Styling for the name field
- * */
-div.wpforms-container-full .wpforms-form div.wpforms-field-container div.wpforms-field-textarea textarea.wpforms-field-required {
-  display: block;
-  width: 100%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-
-/*
- * Styling for the email field
  * */
 div.wpforms-container-full .wpforms-form div.wpforms-field-container div.wpforms-field-name input.wpforms-field-required {
 	display: block;
@@ -10572,7 +10564,7 @@ div.wpforms-container-full .wpforms-form div.wpforms-field-container div.wpforms
 
 
 /*
- * Styling for the phone field
+ * Styling for the email field
  * */
 div.wpforms-container-full .wpforms-form div.wpforms-field-container div.wpforms-field-email input.wpforms-field-required {
 	display: block;
@@ -10592,14 +10584,14 @@ div.wpforms-container-full .wpforms-form div.wpforms-field-container div.wpforms
 
 
 /*
- * Styling for the message field
+ * Styling for the phone field
  * */
 div.wpforms-container-full .wpforms-form div.wpforms-field-container div.wpforms-field-number input.wpforms-field-required {
   
 	display: block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
+  padding: 1.25rem 2.5rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -10609,4 +10601,19 @@ div.wpforms-container-full .wpforms-form div.wpforms-field-container div.wpforms
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+/*
+ * Styling for the message field
+ * */
+
+/* div.wpforms-container-full .wpforms-form textarea.wpforms-field-large {
+  height: 4000px;
+  
+} */
+
+div.wpforms-container-full .wpforms-form  div.wpforms-field-container div.wpforms-field.wpforms-field-textarea.wpforms-one-half textarea.wpforms-field-large.wpforms-field-required {
+  /* display: block; */
+  height: 100%;
 }
