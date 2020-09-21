@@ -23,15 +23,15 @@ if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) ) {
 /**
  * Includes
  */
+
+//  Call the customizer file
+require_once get_template_directory() . '/includes/front/customizer.php';
+
 include( get_theme_file_path( '/includes/front/enqueue.php' ) );
 include( get_theme_file_path( '/includes/menus/primary-menu.php' ) );
 include( get_theme_file_path( '/includes/register-plugins.php' ) );
 //include( get_theme_file_path( '/includes/front/post-thumbnail.php' ) );
 
-/**
- * Call the customizer file
- */
-require_once get_template_directory() . '/includes/front/customizer.php';
 
 
 /**

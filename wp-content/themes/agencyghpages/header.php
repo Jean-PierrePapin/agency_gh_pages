@@ -15,8 +15,18 @@
 
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Welcome To Our Studio!</div>
-                <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+
+                <div class="masthead-subheading">
+                    <?php echo esc_html( get_theme_mod( 'set_header_title', __( 'Welcome To Our Studio!', 'agency-gh-pages' ) ) ); ?>
+                </div>
+
+                <div class="masthead-heading text-uppercase">
+                    <?php echo esc_html( get_theme_mod( 'set_header_subtitle', __( 'It\'s Nice To Meet You', 'agency-gh-pages' ) ) ); ?>
+                </div>
+
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">
+                    <?php echo esc_html( get_theme_mod( 'set_header_button', __( 'Tell Me More', 'agency-gh-pages' ) ) ); ?>
+                </a>
+
             </div>
         </header>
