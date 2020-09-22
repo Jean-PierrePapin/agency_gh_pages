@@ -10,8 +10,12 @@
 <section class="page-section" id="about">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">About</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">
+                <?php echo esc_html( get_theme_mod( 'set_about_title', __( 'About', 'agency-gh-pages' ) ) ); ?>
+            </h2>
+            <h3 class="section-subheading text-muted">
+                <?php echo esc_html( get_theme_mod( 'set_about_subtitle', __( 'Lorem ipsum dolor sit amet consectetur.', 'agency-gh-pages' ) ) ); ?>
+            </h3>
         </div>
 
         <ul class="timeline">

@@ -10,8 +10,12 @@
 <section class="page-section bg-light" id="team">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">
+                <?php echo esc_html( get_theme_mod( 'set_team_title', __( 'Our Amazing Team', 'agency-gh-pages' ) ) ); ?>
+            </h2>
+            <h3 class="section-subheading text-muted">
+                <?php echo esc_html( get_theme_mod( 'set_team_subtitle', __( 'Lorem ipsum dolor sit amet consectetur.', 'agency-gh-pages' ) ) ); ?>
+            </h3>
         </div>
 
         <div class="row">
@@ -72,7 +76,10 @@
 
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                    <p class="large text-muted">
+                        <?php echo esc_html( get_theme_mod( 'set_team_paragraph', __( 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.', 'agency-gh-pages' ) ) ); ?>
+                        
+                    </p>
                 </div>
             </div>
 
