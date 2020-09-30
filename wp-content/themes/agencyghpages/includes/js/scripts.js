@@ -53,4 +53,19 @@
     navbarCollapse();
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
+
+    /**
+     * Customized JS codes to add html elements in order to style the WPForms
+     */
+
+    $(".wpforms-field-container").after('<div class="row align-items-stretch mb-5"><div class="col-md-6">');
+
+    $("#wpforms-56-field_4-container").after("</div>");
+
+    $("#wpforms-56-field_5-container").before('<div class="col-md-6">');
+
+    $("#wpforms-56-field_5-container").after("</div></div>");
+        
+
 })(jQuery); // End of use strict
+

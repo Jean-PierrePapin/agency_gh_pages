@@ -10615,5 +10615,5 @@ div.wpforms-container-full .wpforms-form div.wpforms-field-container div.wpforms
 
 div.wpforms-container-full .wpforms-form  div.wpforms-field-container div.wpforms-field.wpforms-field-textarea.wpforms-one-half textarea.wpforms-field-large.wpforms-field-required {
   /* display: block; */
-  height: 100%;
+  height: 250px;
 }

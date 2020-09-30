@@ -4,7 +4,7 @@ TO DO LIST:
 - Register and enqueue styles and scripts for displaying the header and the footer ========DONE========
 - Create template parts ========DONE=========
 - Create menus ==========DONE===========
-- Use the customizer to do a custom menu, header, each CPT with the title and subtitle...
+- Use the customizer to do a custom menu, header, each CPT with the title and subtitle... ======DONE======
 - Create custom post types (CPT) for Services, Portfolio, About, Team  ==============DONE==========
 - Create a PHP file for the required plugins for the WP theme =========HALF-DONE=============
 - Create Gutenberg blocks for certain CPTs with font and styles
@@ -46,3 +46,11 @@ https://wpforms.com/docs/how-to-customize-the-style-of-individual-form-fields/
 20/09/2020
 Customizer
 https://developer.wordpress.org/themes/customize-api/
+
+24/09/2020
+Think to use relative positioning for displaying the paragraph text inline with the 3 fields on the left
+
+28/09/2020
+Use the DOM manipulations for adding the html elements necessary to have the same design as on the original design
+https://www.w3schools.com/js/js_htmldom.asp
+https://www.w3schools.com/js/js_htmldom_elements.asp
